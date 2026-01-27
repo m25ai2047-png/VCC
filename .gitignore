@@ -1,0 +1,3 @@
+client/node_modules/.bin/browserslist.ps1
+/client/node_modules
+/api/node_modules

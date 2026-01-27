@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Sanjay Test",
+        "email": "sanjay.test@company.com",
+        "department": "Development",
+        "position": "Developer"
+    },
+    {
+        "id": 2,
+        "name": "Ashok Test",
+        "email": "ashok.test@company.com",
+        "department": "Development",
+        "position": "Developer"
+    },
+    {
+        "id": 3,
+        "name": "Sagar Test",
+        "email": "sagar.test@company.com",
+        "department": "QA",
+        "position": "QA Engineer"
+    },
+    {
+        "id": 4,
+        "name": "Vivek Test",
+        "email": "vivek.test@company.com",
+        "department": "DevOps",
+        "position": "DevOps Engineer"
+    },
+    {
+        "id": 5,
+        "name": "Ajay Test",
+        "email": "ajay.test@company.com",
+        "department": "Marketing",
+        "position": "Marketing Specialist"
+    }
+]
