@@ -1,0 +1,5 @@
+gcloud compute firewall-rules create allow-http-lb --network=default-vpc --direction=INGRESS --priority=1000 --action=ALLOW --rules=tcp:80,tcp:443 --source-ranges="35.191.0.0/16,130.211.0.0/22" --target-tags=web-server
+
+gcloud compute firewall-rules create allow-ssh-iap --network=default-vpc --direction=INGRESS --priority=400 --action=ALLOW --rules=tcp:22 --source-ranges="35.235.240.0/20" --target-tags=web-server
+
+gcloud compute firewall-rules create deny-ssh-public --network=default-vpc --direction=INGRESS --priority=500 --action=DENY --rules=tcp:22 --source-ranges="0.0.0.0/0" --target-tags=web-server
