@@ -1,0 +1,2 @@
+gcloud projects add-iam-policy-binding root-micron-458311-u5 --member="user:m25ai2047@iitj.ac.in" --role="roles/compute.admin"
+gcloud projects add-iam-policy-binding root-micron-458311-u5 --member="user:sanjayp@metadesignsolutions.com" --role="roles/compute.instanceAdmin.v1"

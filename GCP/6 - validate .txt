@@ -1,0 +1,8 @@
+gcloud compute instance-groups managed list
+gcloud compute instance-groups managed describe web-server-mig --region=asia-south2
+gcloud compute firewall-rules list --filter="network=default-vpc"
+gcloud projects get-iam-policy root-micron-458311-u5
+
+#oncloud console run below command to connect.
+
+gcloud compute ssh web-server-mig-xq43 --zone=asia-south2-a --tunnel-through-iap --project=root-micron-458311-u

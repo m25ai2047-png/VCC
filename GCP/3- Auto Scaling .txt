@@ -1,0 +1,6 @@
+gcloud compute instance-groups managed create web-server-mig --region=asia-south2 --template=web-server-template --size=2
+
+gcloud compute instance-groups managed set-named-ports web-server-mig --region=asia-south2 --named-ports=http:80,https:443
+
+
+gcloud compute instance-groups managed set-autoscaling web-server-mig --region=asia-south2 --min-num-replicas=1 --max-num-replicas=3 --target-cpu-utilization=0.70 --cool-down-period=90
