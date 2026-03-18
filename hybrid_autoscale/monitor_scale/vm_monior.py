@@ -6,7 +6,7 @@ SCALE_UP_THRESHOLD = 75
 SCALE_DOWN_THRESHOLD = 60
 
 INST_NAME = "autoscale-vm"
-ZONE = "asia-south2-a"
+ZONE = "us-central1-a" # asia-south2-a
 
 def instance_exists():
     result = subprocess.run(
@@ -24,6 +24,7 @@ while True:
     memory = psutil.virtual_memory().percent
     print("CPU:", cpu, "MEM:", memory)
     if cpu > SCALE_UP_THRESHOLD or memory > SCALE_UP_THRESHOLD:
+        print("if scale up needed", cpu, memory)
         if not instance_exists():
             print("Scaling UP => Creating VM")
             subprocess.run([
@@ -35,6 +36,7 @@ while True:
             ])
 
     elif cpu < SCALE_DOWN_THRESHOLD and memory < SCALE_DOWN_THRESHOLD:
+        print("if scale down needed", cpu, memory)
         if instance_exists():
             print("Scaling DOWN => Deleting VM")
             subprocess.run([
