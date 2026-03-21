@@ -1,12 +1,12 @@
-#!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
 
-sudo apt update
-sudo apt install -y python3-pip git
+sudo -E apt update
+sudo -E apt install -y python3-pip git
 
-git clone https://github.com/m25ai2047-png/VCC.git
+git clone https://github.com/m25ai2047-png/VCC.git /VCC
 
-cd hybrid_autoscale/app
+cd /VCC/hybrid_autoscale/app
 
 pip3 install flask
 
-python3 app.py
+nohup python3 app.py > /var/log/app.log 2>&1 &

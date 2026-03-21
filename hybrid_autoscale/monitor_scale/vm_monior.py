@@ -32,7 +32,9 @@ while True:
                 "--zone",ZONE,
                 "--machine-type","e2-micro",
                 "--image-family","debian-11",
-                "--image-project","debian-cloud"
+                "--image-project","debian-cloud",
+                "--tags", "flask-app",
+                "--metadata-from-file", "startup-script=startup.sh"
             ])
 
     elif cpu < SCALE_DOWN_THRESHOLD and memory < SCALE_DOWN_THRESHOLD:
